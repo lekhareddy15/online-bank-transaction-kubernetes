@@ -1,0 +1,26 @@
+services:
+  app:
+    build: .
+    container_name: DigitalBank
+    ports:
+      - "4545:4545"
+    environment:
+      - MONGODB_URI=mongodb://mongo:27017/bank_transaction_system
+    volumes:
+      - .:/usr/src/app
+    depends_on:
+      - mongo
+ 
+  mongo:
+    image: mongo:latest
+    container_name: Transaction
+    
+    environment:
+      MONGO_INITDB_DATABASE: bank_transaction_system
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+ 
+volumes:
+  mongodb_data:

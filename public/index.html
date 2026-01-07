@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Bank</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Link the favicon -->
+    <link rel="icon" href="images/logo.jpg" type="image/jpeg">
+    <!-- If your favicon is an .ico file, use the following line instead -->
+    <!-- <link rel="icon" href="images/favicon.ico" type="image/x-icon"> -->
+</head>
+<body class="main-page">
+    <header>
+        <div id="account-holder">
+            <p>Account Holder: Rahul Reddy</p>
+        </div>
+        <div class="bank-info">
+            <img src="images/logo.jpg" alt="Digital Logo" class="logo">
+            <div class="bank-name">
+                <h1> Digital Bank </h1>
+                <h3>Empowering your financial future</h3>
+            </div>
+        </div>
+        <div id="balance-info">
+            <p>Balance: ₹<span id="balance">100000</span></p>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <button onclick="location.href='credit.html'">Credit</button>
+            <button onclick="location.href='debit.html'">Debit</button>
+            <button onclick="location.href='transfer.html'">Transfer</button>
+        </div>
+    </main>
+    <script src="js/main.js"></script>
+</body>
+</html>

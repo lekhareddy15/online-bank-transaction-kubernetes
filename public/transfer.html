@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfer - Digital Bank</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/logo.jpg" type="image/jpeg">
+</head>
+<body class="transfer-page">
+    <header>
+        <div class="header-container">
+            <h1 class="header-title">Transfer</h1>
+            <nav class="header-nav">
+                <a href="credit.html" class="nav-button">Credit</a>
+                <a href="debit.html" class="nav-button">Debit</a>
+                <a href="index.html" class="back-button">Back</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <form id="transfer-form">
+                <label for="recipient-name">Recipient Name (3 to 30 letters)*:</label>
+                <input type="text" id="recipient-name" required>
+                <div id="recipient-name-error" class="error"></div>
+                
+                <label for="user-account-number">User Account Number*:</label>
+                <div id="user-account-number" class="non-copyable">562123459856</div>
+                
+                <label for="recipient-account-number">Recipient Account Number (12 digits)*:</label>
+                <input type="text" id="recipient-account-number" required>
+                <div id="recipient-account-number-error" class="error"></div>
+                
+                <label for="re-enter-recipient-account-number">Re-enter Recipient Account Number*:</label>
+                <input type="text" id="re-enter-recipient-account-number" required>
+                <div id="re-enter-recipient-account-number-error" class="error"></div>
+                
+                <label for="recipient-ifsc-code">Recipient IFSC Code*:</label>
+                <input type="text" id="recipient-ifsc-code" required>
+                <div id="recipient-ifsc-code-error" class="error"></div>
+                
+                <label for="pan-number">Your PAN Card Number*:</label>
+                <input type="text" id="pan-number" required>
+                <div id="pan-number-error" class="error"></div>
+                
+                <label for="account-type">Account Type*:</label>
+                <select id="account-type" required>
+                    <option value="">Select Type</option>
+                    <option value="Current Account">Current Account</option>
+                    <option value="Savings Account">Savings Account</option>
+                </select>
+                <div id="account-type-error" class="error"></div>
+                
+                <label for="transfer-amount">Amount to Transfer*:</label>
+                <input type="number" id="transfer-amount" required>
+                <div id="transfer-amount-error" class="error"></div>
+                
+                <button type="submit">Transfer</button>
+            </form>
+            <div id="acknowledgment"></div>
+        </div>
+    </main>
+    <script src="js/transfer.js"></script>
+</body>
+</html>

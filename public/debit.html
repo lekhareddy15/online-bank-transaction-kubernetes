@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debit - Bank Transaction System</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/logo.jpg" type="image/jpeg">
+</head>
+<body class="debit-page">
+    <header>
+        <div class="header-container">
+            <h1 class="header-title">Debit</h1>
+            <nav class="header-nav">
+                <a href="credit.html" class="nav-button">Credit</a>
+                <a href="transfer.html" class="nav-button">Transfer</a>
+                <a href="index.html" class="back-button">Back</a>
+            </nav>
+        </div> 
+    </header>
+    <main>
+        <div class="container">
+            <form id="debit-form">
+                <label for="user-name">Recipient name (3 to 30 letters)*:</label>
+                <input type="text" id="user-name" required>
+                <div id="user-name-error" class="error"></div>
+
+                <label for="account-number">Recipient Account Number (12 digits)*:</label>
+                <input type="text" id="account-number" required>
+                <div id="account-number-error" class="error"></div>
+
+                <label for="retype-account-number">Re-type Recipient Account Number*:</label>
+                <input type="text" id="retype-account-number" required>
+                <div id="retype-account-number-error" class="error"></div>
+
+                <label for="ifsc-code">Recipient IFSC Code*:</label>
+                <input type="text" id="ifsc-code" required>
+                <div id="ifsc-code-error" class="error"></div>
+
+                <label for="phone-number">Recipient Phone Number (10 digits)*:</label>
+                <input type="tel" id="phone-number" required>
+                <div id="phone-number-error" class="error"></div>
+
+                <label for="email">Recipient Email*:</label>
+                <input type="email" id="email" required>
+                <div id="email-error" class="error"></div>
+
+                <label for="debit-amount">Amount to be Debited*:</label>
+                <input type="number" id="debit-amount" required>
+                <div id="debit-amount-error" class="error"></div>
+
+                <button type="submit">Debit</button>
+            </form>
+            <div id="acknowledgment"></div>
+        </div>
+    </main>
+    <script src="js/debit.js"></script>
+</body>
+</html>
